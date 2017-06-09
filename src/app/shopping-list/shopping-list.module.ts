@@ -13,6 +13,6 @@ import { NgModule } from '@angular/core';
     CommonModule,
     FormsModule
   ],
-  exports: [FormsModule]
+  // exports: [FormsModule]
 })
 export class ShoppingListModule {}

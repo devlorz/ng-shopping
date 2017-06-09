@@ -1,3 +1,4 @@
+import { AuthModule } from './auth/auth.module';
 import { ShoppingListModule } from './shopping-list/shopping-list.module';
 import { SharedModule } from './shared/shared.module';
 import { RecipesModule } from './recipes/recipes.module';
@@ -13,15 +14,11 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
-import { SignupComponent } from './auth/signup/signup.component';
-import { SigninComponent } from './auth/signin/signin.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    SignupComponent,
-    SigninComponent
   ],
   imports: [
     BrowserModule,
@@ -29,7 +26,8 @@ import { SigninComponent } from './auth/signin/signin.component';
     AppRoutingModule,
     RecipesModule,
     SharedModule,
-    ShoppingListModule
+    ShoppingListModule,
+    AuthModule
   ],
   providers: [ShoppingListService, RecipeService, DataStorageservice, AuthService, AuthGuard],
   bootstrap: [AppComponent]
